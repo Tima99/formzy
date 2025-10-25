@@ -36,6 +36,17 @@
   </div>
 
   <script>
+
+    // Text-to-Speech welcome
+    window.addEventListener('DOMContentLoaded', () => {
+      const msg = new SpeechSynthesisUtterance();
+      msg.text = "Welcome to Formzy! Please enter your email so we can notify you when we finish.";
+      msg.lang = 'en-US';
+      msg.rate = 1;
+      window.speechSynthesis.speak(msg);
+    });
+
+    // Form submission
     const form = document.getElementById('subscribe-form');
     const successMsg = document.querySelector('.success');
 
